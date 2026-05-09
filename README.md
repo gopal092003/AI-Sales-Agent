@@ -1,23 +1,45 @@
 # AI Sales Intelligence Agent
 
-An AI-native multi-agent sales intelligence system that autonomously researches companies, detects growth signals, scores leads, and generates personalized outreach using LLM-powered reasoning pipelines.
+An AI-native multi-agent sales intelligence platform that autonomously researches companies, detects growth signals, scores leads, and generates personalized outreach using LLM-powered reasoning pipelines.
+
+---
+
+# Live Demo
+
+## Frontend
+https://ai-sales-agent-orcin.vercel.app/
+
+## Backend API
+https://ai-sales-agent-5afh.onrender.com/docs
 
 ---
 
 # Overview
 
-This project simulates a modern AI SDR (Sales Development Representative) workflow.
+This project simulates a modern AI SDR (Sales Development Representative) workflow used by AI-native GTM teams and modern SaaS startups.
 
-The system can:
+The platform autonomously:
 
-- Research companies in real time
-- Extract hiring and growth signals
-- Analyze technology stacks
-- Score leads based on ICP fit
-- Generate personalized cold outreach
-- Produce structured sales intelligence reports
+- Researches companies in real time
+- Detects hiring and growth signals
+- Analyzes technology stacks
+- Scores leads based on ICP fit
+- Generates personalized cold outreach
+- Produces structured sales intelligence reports
 
-The architecture is designed to mimic real-world AI GTM systems used in modern startups.
+The architecture is inspired by real-world AI sales intelligence systems used in modern startups.
+
+---
+
+# Screenshots
+
+## Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+## AI Sales Intelligence Report
+
+![Report Page](docs/screenshots/report-page.png)
 
 ---
 
@@ -27,7 +49,7 @@ The architecture is designed to mimic real-world AI GTM systems used in modern s
 - Website analysis
 - Business model extraction
 - Industry classification
-- Company summarization
+- AI-generated company summarization
 
 ## Hiring & Growth Signal Detection
 - Job posting analysis
@@ -35,9 +57,9 @@ The architecture is designed to mimic real-world AI GTM systems used in modern s
 - Hiring trend extraction
 
 ## Tech Stack Analysis
-- Detect frontend/backend technologies
-- Identify analytics and CRM tools
-- Cloud infrastructure detection
+- Frontend/backend technology detection
+- Cloud infrastructure identification
+- Analytics tooling detection
 
 ## Lead Scoring Engine
 Scores leads using:
@@ -48,10 +70,10 @@ Scores leads using:
 
 ## AI Outreach Generator
 Generates:
-- Cold emails
+- Personalized cold emails
 - LinkedIn outreach
-- Follow-ups
-- Personalized messaging
+- Follow-up sequences
+- AI-tailored messaging
 
 ## Sales Intelligence Reports
 Structured reports including:
@@ -60,6 +82,7 @@ Structured reports including:
 - Opportunity analysis
 - Outreach strategy
 - Lead score
+- Growth indicators
 
 ## Multi-Agent Orchestration
 Agents:
@@ -73,24 +96,27 @@ Agents:
 # Tech Stack
 
 ## Frontend
-- Next.js
+- Next.js 15
 - TypeScript
 - TailwindCSS
 - shadcn/ui
+- React Query
+- Zustand
 
 ## Backend
 - FastAPI
 - SQLite
 - Async Python
+- SQLAlchemy
+- Pydantic
 
 ## AI / LLM
-- Ollama
 - Groq API
-- Llama 3
-- Qwen2.5
+- Llama 3.3 70B
 - DeepSeek-R1
+- Ollama support
 
-## Scraping
+## Scraping & Enrichment
 - BeautifulSoup
 - Playwright
 - RSS feeds
@@ -98,11 +124,11 @@ Agents:
 
 ## Deployment
 - Vercel
-- Render / Railway
+- Render
 
 ---
 
-# Project Architecture
+# System Architecture
 
 ```text
 Frontend (Next.js)
@@ -128,11 +154,12 @@ Structured Intelligence Report
 # Folder Structure
 
 ```text
-ai-sales-agent/
+AI-Sales-Agent/
 │
-├── frontend/          # Next.js frontend
-├── backend/           # FastAPI backend
-├── docs/              # Architecture & deployment docs
+├── frontend/              # Next.js frontend
+├── backend/               # FastAPI backend
+├── docs/
+│   └── screenshots/
 │
 ├── README.md
 ├── .gitignore
@@ -143,16 +170,17 @@ ai-sales-agent/
 
 # Local Development Setup
 
-# 1. Clone Repository
+## 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-sales-agent.git
-cd ai-sales-agent
+git clone https://github.com/gopal092003/AI-Sales-Agent.git
+
+cd AI-Sales-Agent
 ```
 
 ---
 
-# 2. Frontend Setup
+# Frontend Setup
 
 ```bash
 cd frontend
@@ -170,7 +198,7 @@ http://localhost:3000
 
 ---
 
-# 3. Backend Setup
+# Backend Setup
 
 ```bash
 cd backend
@@ -178,7 +206,7 @@ cd backend
 python -m venv venv
 ```
 
-Activate virtual environment:
+Activate virtual environment.
 
 ## Windows
 
@@ -244,9 +272,9 @@ Example:
 APP_NAME=AI Sales Intelligence Agent
 DEBUG=True
 
-GROQ_API_KEY=your_api_key
+GROQ_API_KEY=your_groq_api_key
 
-OLLAMA_BASE_URL=http://localhost:11434
+DEFAULT_LLM_MODEL=llama-3.3-70b-versatile
 ```
 
 ---
@@ -279,64 +307,26 @@ GET /api/reports
 
 ---
 
-# Development Roadmap
-
-## Phase 1
-- Backend foundation
-- Frontend setup
-- Health APIs
-- Database setup
-
-## Phase 2
-- Website scraping
-- Company research agent
-- LLM integration
-
-## Phase 3
-- Hiring signal detection
-- Lead scoring engine
-- Outreach generation
-
-## Phase 4
-- Dashboard UI
-- Reports system
-- Deployment
-
-## Phase 5
-- CRM integration
-- Batch processing
-- Multi-agent memory
-- Vector search
-
----
-
 # Deployment
 
 ## Frontend
-Deploy on:
 - Vercel
 
 ## Backend
-Deploy on:
 - Render
-- Railway
 
 ---
 
 # Future Improvements
 
+- PostgreSQL migration
 - CRM integrations
-- Chrome extension
 - Email automation
 - Multi-company enrichment
 - AI memory systems
 - Vector search pipelines
-
----
-
-# Resume Bullet
-
-> Built an AI-native sales intelligence system that autonomously performs company research, lead scoring, and personalized outreach generation using multi-agent orchestration, real-time web scraping, and LLM-based reasoning pipelines.
+- Batch lead processing
+- Authentication & team workspaces
 
 ---
 
@@ -348,6 +338,4 @@ MIT License
 
 # Author
 
-Your Name
-
-```
+Gopal Gupta
