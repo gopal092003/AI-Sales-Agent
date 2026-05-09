@@ -6,11 +6,8 @@ An AI-native multi-agent sales intelligence platform that autonomously researche
 
 # Live Demo
 
-## Frontend
+## Web link
 https://ai-sales-agent-orcin.vercel.app/
-
-## Backend API
-https://ai-sales-agent-5afh.onrender.com/docs
 
 ---
 
