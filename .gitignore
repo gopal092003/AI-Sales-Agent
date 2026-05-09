@@ -1,0 +1,164 @@
+# =========================================================
+# ROOT
+# =========================================================
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Secrets
+*.pem
+*.key
+*.crt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# =========================================================
+# FRONTEND (Next.js)
+# =========================================================
+
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Next.js env
+frontend/.env.local
+frontend/.env.production
+frontend/.env.development
+
+# Vercel
+frontend/.vercel/
+
+# TypeScript
+frontend/*.tsbuildinfo
+
+# =========================================================
+# BACKEND (FastAPI)
+# =========================================================
+
+# Python virtual environments
+backend/venv/
+backend/.venv/
+backend/env/
+backend/.env/
+
+# Python cache
+backend/__pycache__/
+backend/**/*.pyc
+
+# SQLite database
+backend/*.db
+backend/*.sqlite3
+
+# Local environment variables
+backend/.env
+
+# Mypy / Ruff / Pyright
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/.pyright/
+
+# Alembic
+backend/alembic/versions/*.pyc
+
+# =========================================================
+# OLLAMA / AI MODELS
+# =========================================================
+
+models/
+ollama-models/
+*.gguf
+
+# =========================================================
+# SCRAPING / GENERATED DATA
+# =========================================================
+
+scraped_data/
+exports/
+reports/
+*.csv
+*.xlsx
+
+# =========================================================
+# TESTS
+# =========================================================
+
+.pytest_cache/
+.coverage
+coverage.xml
+
+# =========================================================
+# CACHE
+# =========================================================
+
+.cache/
+*.cache
+
+# =========================================================
+# DOCKER
+# =========================================================
+
+docker-compose.override.yml
+
+# =========================================================
+# MISC
+# =========================================================
+
+*.bak
+*.old
+*.orig
+
+# Mac
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Windows
+Desktop.ini

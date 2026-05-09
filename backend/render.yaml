@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: ai-sales-agent-backend
+    env: python
+    plan: free
+
+    rootDir: backend
+
+    buildCommand: |
+      pip install -r requirements.txt
+
+    startCommand: |
+      bash start.sh
+
+    autoDeploy: true
+
+    envVars:
+      - key: APP_NAME
+        value: AI Sales Intelligence Agent
+
+      - key: APP_ENV
+        value: production
+
+      - key: DEBUG
+        value: "False"
+
+      - key: API_V1_PREFIX
+        value: /api
+
+      - key: DATABASE_URL
+        value: sqlite:///./sales_agent.db
+
+      - key: LOG_LEVEL
+        value: INFO
+
+      - key: REQUEST_TIMEOUT
+        value: "30"
+
+      - key: MAX_RETRIES
+        value: "3"
+
+      - key: ENABLE_NEWS_SCRAPING
+        value: "True"
+
+      - key: ENABLE_TECHSTACK_DETECTION
+        value: "True"
+
+      - key: ENABLE_HIRING_SIGNALS
+        value: "True"
+
+      # Add manually inside Render dashboard
+      - key: GROQ_API_KEY
+        sync: false
